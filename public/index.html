@@ -44,18 +44,10 @@
     </div>
 
     <!-- Saran Topik Cepat -->
-   
-    <form class="chat-input-area" id="chatForm">
-      <input type="text" id="userInput" placeholder="Tanyakan apa saja di sini..." autocomplete="off" required />
-      <button type="submit" id="sendBtn" aria-label="Kirim Pesan">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="22" y1="2" x2="11" y2="13"></line>
-          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-        </svg>
-      </button>
-    </form>
-  </div>
+    <div class="quick-prompts" id="quickPrompts">
+      <button type="button" class="chip" data-prompt="Berikan ide proyek web yang menarik">💡 Ide Proyek Web</button>
+      <button type="button" class="chip" data-prompt="Jelaskan cara kerja REST API secara singkat">⚡ Apa itu REST API?</button>
+      <button type="button" class="chip" data-prompt="Berikan motivasi belajar ngoding hari ini">🔥 Motivasi Ngoding</button>
+    </div>
 
-  <script src="script.js"></script>
-</body>
-</html>
+   
