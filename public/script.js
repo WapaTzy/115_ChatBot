@@ -126,13 +126,11 @@ chatForm.addEventListener('submit', (e) => {
 });
 
 // Event untuk tombol saran cepat (Quick Prompts)
+document.querySelectorAll('.chip').forEach((chip) => {
+  chip.addEventListener('click', () => {
+    const promptText = chip.getAttribute('data-prompt');
+    sendMessage(promptText);
+  });
+});
 
 // Event untuk tombol hapus riwayat chat
-clearBtn.addEventListener('click', () => {
-  chatHistory = [initialSystemPrompt];
-  chatMessages.innerHTML = '';
-  appendMessage('Halo! Ada yang bisa saya bantu hari ini?', false);
-  if (quickPrompts) {
-    quickPrompts.style.display = 'flex';
-  }
-});
