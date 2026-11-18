@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Dekorasi Cahaya Latar Belakang -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="header-left">
+        <div class="bot-avatar">✦</div>
+        <div class="header-info">
+          <h1>Chatbot AI</h1>
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Online • OpenRouter AI</span>
+          </div>
+        </div>
+      </div>
+      <button type="button" id="clearBtn" class="clear-btn" title="Hapus Riwayat Chat">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 6h18"></path>
+          <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+          <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="message-row bot-row">
+        <div class="msg-avatar">✦</div>
+        <div class="message bot-message">Halo! Ada yang bisa saya bantu hari ini?</div>
+      </div>
+    </div>
+
+    <!-- Saran Topik Cepat -->
+    <div class="quick-prompts" id="quickPrompts">
+      <button type="button" class="chip" data-prompt="Berikan ide proyek web yang menarik">💡 Ide Proyek Web</button>
+      <button type="button" class="chip" data-prompt="Jelaskan cara kerja REST API secara singkat">⚡ Apa itu REST API?</button>
+      <button type="button" class="chip" data-prompt="Berikan motivasi belajar ngoding hari ini">🔥 Motivasi Ngoding</button>
+    </div>
+
+    <form class="chat-input-area" id="chatForm">
+      <input type="text" id="userInput" placeholder="Tanyakan apa saja di sini..." autocomplete="off" required />
+      <button type="submit" id="sendBtn" aria-label="Kirim Pesan">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
