@@ -134,3 +134,11 @@ document.querySelectorAll('.chip').forEach((chip) => {
 });
 
 // Event untuk tombol hapus riwayat chat
+clearBtn.addEventListener('click', () => {
+  chatHistory = [initialSystemPrompt];
+  chatMessages.innerHTML = '';
+  appendMessage('Halo! Ada yang bisa saya bantu hari ini?', false);
+  if (quickPrompts) {
+    quickPrompts.style.display = 'flex';
+  }
+});
